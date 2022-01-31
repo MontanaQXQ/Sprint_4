@@ -13,18 +13,21 @@ import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class AccountTest {
 
-    private final String checkedText;
+    private final String checkedValue;
     private final boolean expected;
 
-    public AccountTest(String checkedText,boolean expected) {
-        this.checkedText = checkedText;
+
+    public AccountTest(String checkedValue,boolean expected) {
+        this.checkedValue = checkedValue;
         this.expected = expected;
+
     }
 
 
     @Parameterized.Parameters
     public static Object[][] getTextData(){
         return new Object[][] {
+
                 {null, false},
                 {"", false},
                 {"12", false},
@@ -48,9 +51,8 @@ public class AccountTest {
     @Description("Проверяем Позитивные и негативные сценарии.")
     @Test
     public void paramAccountTest()  {
-        Account account = new Account(checkedText);
+        Account account = new Account(checkedValue);
         assertEquals(expected, account.checkNameToEmboss());
-
     }
 
 
