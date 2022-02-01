@@ -30,7 +30,7 @@ public class AccountTest {
     public static Object[][] getTextData(){
         return new Object[][] {
 
-                {"Проверка  NULL",null, false},
+              //  {"Проверка  NULL",null, false},
                 {"0 символов","", false},
                 {"2 символа слитно","12", false},
                 {"3 символа слитно","123", false},
