@@ -25,7 +25,6 @@ public class Account {
                 System.out.println("Печать отклонена.Отсутствует пробел, либо число пробелов между словами больше одного.");
                 return false;
 
-
             }
             System.out.println("Печатать можно");
             return true;
